@@ -1,0 +1,160 @@
+service = MessageLogger
+{
+   untracked vstring destinations =
+   {
+      "MessageLogger",
+      "cout",
+      "cerr"
+   }
+
+   untracked vstring fwkJobReports = 
+   {
+      "FrameworkJobReport"
+   }
+
+   untracked vstring categories = 
+   { 
+      "FwkJob",
+      "GlobalDigisProducer_GlobalDigisProducer",
+      "GlobalDigisProducer_endJob",
+      "GlobalDigisProducer_produce",
+      "GlobalDigisProducer_fillG4MC",
+      "GlobalDigisProducer_storeG4MC",
+      "GlobalDigisProducer_fillTrk",
+      "GlobalDigisProducer_storeTrk",
+      "GlobalDigisProducer_fillMuon",
+      "GlobalDigisProducer_storeMuon",
+      "GlobalDigisProducer_fillECal",
+      "GlobalDigisProducer_storeECal",
+      "GlobalDigisProducer_fillHCal",
+      "GlobalDigisProducer_storeHCal",
+      "GlobalDigisProducer_clear",
+      "ScheduleExecutionFailure",
+      "EventSetupDependency" 
+   }
+
+   untracked PSet MessageLogger =
+   {
+      untracked int32 lineLength = 132
+      untracked bool noLineBreaks = true
+      untracked PSet default = { untracked int32 limit = 0  }
+      untracked PSet GlobalDigisProducer_GlobalDigisProducer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_produce = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_fillG4MC = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_storeG4MC = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_fillTrk = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_storeTrk = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_fillMuon = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_storeMuon = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_fillECal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_storeECal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_fillHCal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_storeHCal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_clear = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet ScheduleExecutionFailure = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet EventSetupDependency = 
+	{ untracked int32 limit = 10000000 }
+   }
+   untracked PSet cout =
+   {
+      untracked int32 lineLength = 132
+      untracked bool noLineBreaks = true
+      untracked string threshold = "INFO"
+      untracked PSet default = { untracked int32 limit = 0  }
+      untracked PSet GlobalDigisProducer_GlobalDigisProducer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_produce = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_fillG4MC = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_storeG4MC = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_fillTrk = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_storeTrk = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_fillMuon = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_storeMuon = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_fillECal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_storeECal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_fillHCal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_storeHCal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_clear = 
+	{ untracked int32 limit = 10000000 }
+      //untracked PSet ScheduleExecutionFailure = 
+      //	{ untracked int32 limit = 10000000 }
+      //untracked PSet EventSetupDependency = 
+      //	{ untracked int32 limit = 10000000 }  
+   }
+   untracked PSet cerr =
+   {
+      untracked int32 lineLength = 132
+      untracked bool noLineBreaks = true
+      untracked string threshold = "WARNING"
+      untracked PSet default = { untracked int32 limit = 0  }
+      untracked PSet GlobalDigisProducer_GlobalDigisProducer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_produce = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_fillG4MC = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_storeG4MC = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_fillTrk = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_storeTrk = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_fillMuon = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_storeMuon = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_fillECal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_storeECal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_fillHCal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_storeHCal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_clear = 
+	{ untracked int32 limit = 10000000 } 
+      untracked PSet ScheduleExecutionFailure = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet EventSetupDependency = 
+	{ untracked int32 limit = 10000000 } 
+   }
+
+   untracked PSet FrameworkJobReport = 
+   {
+      //untracked PSet default = 
+      //	{ untracked int32 limit = 0 }
+      untracked PSet FwkJob = 
+	{ untracked int32 limit = 10000000 }
+   }
+}
