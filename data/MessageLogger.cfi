@@ -16,6 +16,7 @@ service = MessageLogger
    { 
       "FwkJob",
       "GlobalDigisProducer_GlobalDigisProducer",
+      "GlobalDigisProducer_beginJob",
       "GlobalDigisProducer_endJob",
       "GlobalDigisProducer_produce",
       "GlobalDigisProducer_fillG4MC",
@@ -39,6 +40,8 @@ service = MessageLogger
       untracked bool noLineBreaks = true
       untracked PSet default = { untracked int32 limit = 0  }
       untracked PSet GlobalDigisProducer_GlobalDigisProducer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_beginJob = 
 	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalDigisProducer_endJob = 
 	{ untracked int32 limit = 10000000 }
@@ -79,6 +82,8 @@ service = MessageLogger
       untracked PSet default = { untracked int32 limit = 0  }
       untracked PSet GlobalDigisProducer_GlobalDigisProducer = 
 	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_beginJob = 
+	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalDigisProducer_endJob = 
 	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalDigisProducer_produce = 
@@ -117,6 +122,8 @@ service = MessageLogger
       untracked string threshold = "WARNING"
       untracked PSet default = { untracked int32 limit = 0  }
       untracked PSet GlobalDigisProducer_GlobalDigisProducer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisProducer_beginJob = 
 	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalDigisProducer_endJob = 
 	{ untracked int32 limit = 10000000 }
