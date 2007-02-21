@@ -21,5 +21,6 @@ module globaldigis = GlobalDigisProducer
     InputTag ECalEBSrc = ecalDigis:ebDigis
     InputTag ECalEESrc = ecalDigis:eeDigis
     InputTag ECalESSrc = ecalPreshowerDigis
+    InputTag HCalSrc   = g4SimHits:HcalHits
     
 }
