@@ -15,16 +15,16 @@ void MakeHistograms(TString srcname="GlobalDigis.root",
   //http://root.cern.ch/root/html/src/TStyle.cxx.html#TStyle:SetOptStat
   gStyle->SetOptStat("emruo");
 
-  // setup names
-  //TString srcname = "GlobalHits.root";
-  TString treename = "Events";
-  TString brnchname = "PGlobalDigi_globaldigis_GlobalDigis_GLOBAL.obj";
-
   // clear memory of file name
   delete gROOT->GetListOfFiles()->FindObject(srcname);
 
   // open source file
   TFile *srcfile = new TFile(srcname);
+
+  // setup names
+  //TString srcname = "GlobalHits.root";
+  TString treename = "Events";
+  TString brnchname = "PGlobalDigi_globaldigis_GlobalDigis_GLOBAL.obj";
   
   // get tree from file
   TTree *srcevts = dynamic_cast<TTree*>(srcfile->Get(treename));
@@ -73,7 +73,7 @@ void MakeHistograms(TString srcname="GlobalDigis.root",
   // ecal
   TH1F *hEcaln[2];
   hEcaln[0] = 
-    new TH1F("hEcaln_EE","EECal digis",100,0.,500.);
+    new TH1F("hEcaln_EE","EECal digis",300,1000.,4000.);
   hEcaln[1] = 
     new TH1F("hEcaln_EB","EBCal digis",300,1000.,4000.);
   TH1F *hEcalAEE[2];
@@ -85,7 +85,7 @@ void MakeHistograms(TString srcname="GlobalDigis.root",
   hEcalSHE[0] = 
     new TH1F("hEcalSHE_EE","EECal SHE",50,0.,5.);
   hEcalSHE[1] = 
-    new TH1F("hEcalSHE_EB","EBCal SHE",20,0.,2.);
+    new TH1F("hEcalSHE_EB","EBCal SHE",50,0.,5.);
   TH1F *hEcalMaxPos[2];
   hEcalMaxPos[0] = 
     new TH1F("hEcalMaxPos_EE","EECal MaxPos",10,0.,10.);
@@ -93,7 +93,7 @@ void MakeHistograms(TString srcname="GlobalDigis.root",
     new TH1F("hEcalMaxPos_EB","EBCal MaxPos",10,0.,10.);
   TProfile *hEcalMultvAEE[2];
   hEcalMultvAEE[0] =
-    new TProfile("hEcalMultvAEE_EE","EECal Mult vs. AEE",50,0.,10.,0.,500.);
+    new TProfile("hEcalMultvAEE_EE","EECal Mult vs. AEE",50,0.,10.,0.,4000.);
   hEcalMultvAEE[1] =
     new TProfile("hEcalMultvAEE_EB","EBCal Mult vs. AEE",50,0.,10.,0.,4000.);
   TProfile *hEcalSHEvAEESHE[2];
@@ -235,43 +235,43 @@ void MakeHistograms(TString srcname="GlobalDigis.root",
   // SiStrip
   TH1F *hSiStripn[19];
   hSiStripn[0] = 
-    new TH1F("hSiStripn_TIBL1","TIBL1 digis",250,0.,500.);
+    new TH1F("hSiStripn_TIBL1","TIBL1 digis",500,0.,1000.);
   hSiStripn[1] = 
-    new TH1F("hSiStripn_TIBL2","TIBL2 digis",250,0.,500.);
+    new TH1F("hSiStripn_TIBL2","TIBL2 digis",500,0.,1000.);
   hSiStripn[2] = 
-    new TH1F("hSiStripn_TIBL3","TIBL3 digis",250,0.,500.);
+    new TH1F("hSiStripn_TIBL3","TIBL3 digis",500,0.,1000.);
   hSiStripn[3] = 
-    new TH1F("hSiStripn_TIBL4","TIBL4 digis",250,0.,500.);
+    new TH1F("hSiStripn_TIBL4","TIBL4 digis",500,0.,1000.);
   hSiStripn[4] = 
-    new TH1F("hSiStripn_TOBL1","TOBL1 digis",250,0.,500.);
+    new TH1F("hSiStripn_TOBL1","TOBL1 digis",500,0.,1000.);
   hSiStripn[5] = 
-    new TH1F("hSiStripn_TOBL2","TOBL2 digis",250,0.,500.);
+    new TH1F("hSiStripn_TOBL2","TOBL2 digis",500,0.,1000.);
   hSiStripn[6] = 
-    new TH1F("hSiStripn_TOBL3","TOBL3 digis",250,0.,500.);
+    new TH1F("hSiStripn_TOBL3","TOBL3 digis",500,0.,1000.);
   hSiStripn[7] = 
-    new TH1F("hSiStripn_TOBL4","TOBL4 digis",250,0.,500.);
+    new TH1F("hSiStripn_TOBL4","TOBL4 digis",500,0.,1000.);
   hSiStripn[8] = 
-    new TH1F("hSiStripn_TIDW1","TIDW1 digis",50,0.,100.);
+    new TH1F("hSiStripn_TIDW1","TIDW1 digis",500,0.,1000.);
   hSiStripn[9] = 
-    new TH1F("hSiStripn_TIDW2","TIDW2 digis",50,0.,100.);
+    new TH1F("hSiStripn_TIDW2","TIDW2 digis",500,0.,1000.);
   hSiStripn[10] = 
-    new TH1F("hSiStripn_TIDW3","TIDW3 digis",50,0.,100.);
+    new TH1F("hSiStripn_TIDW3","TIDW3 digis",500,0.,1000.);
   hSiStripn[11] = 
-    new TH1F("hSiStripn_TECW1","TECW1 digis",50,0.,100.);
+    new TH1F("hSiStripn_TECW1","TECW1 digis",500,0.,1000.);
   hSiStripn[12] = 
-    new TH1F("hSiStripn_TECW2","TECW2 digis",50,0.,100.);
+    new TH1F("hSiStripn_TECW2","TECW2 digis",500,0.,1000.);
   hSiStripn[13] = 
-    new TH1F("hSiStripn_TECW3","TECW3 digis",50,0.,100.);
+    new TH1F("hSiStripn_TECW3","TECW3 digis",500,0.,1000.);
   hSiStripn[14] = 
-    new TH1F("hSiStripn_TECW4","TECW4 digis",50,0.,100.);
+    new TH1F("hSiStripn_TECW4","TECW4 digis",500,0.,1000.);
   hSiStripn[15] = 
-    new TH1F("hSiStripn_TECW5","TECW5 digis",50,0.,100.);
+    new TH1F("hSiStripn_TECW5","TECW5 digis",500,0.,1000.);
   hSiStripn[16] = 
-    new TH1F("hSiStripn_TECW6","TECW6 digis",50,0.,100.);
+    new TH1F("hSiStripn_TECW6","TECW6 digis",500,0.,1000.);
   hSiStripn[17] = 
-    new TH1F("hSiStripn_TECW7","TECW7 digis",50,0.,100.);
+    new TH1F("hSiStripn_TECW7","TECW7 digis",500,0.,1000.);
   hSiStripn[18] = 
-    new TH1F("hSiStripn_TECW8","TECW8 digis",50,0.,100.);
+    new TH1F("hSiStripn_TECW8","TECW8 digis",500,0.,1000.);
   TH1F *hSiStripADC[19];
   hSiStripADC[0] = 
     new TH1F("hSiStripADC_TIBL1","TIBL1 ADC",150,0.,300.);
@@ -968,13 +968,13 @@ void MakeHistograms(TString srcname="GlobalDigis.root",
   myCanvas = Canvas1;
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hEcaln[i]->Draw();
     myCanvas->cd(2);
     //gPad->SetLogy();
     hEcalAEE[i]->Draw();
     myCanvas->cd(3);
-    gPad->SetLogy();
+    //   gPad->SetLogy();
     hEcalSHE[i]->Draw();
     myCanvas->cd(4);
     //gPad->SetLogy();  
@@ -992,7 +992,7 @@ void MakeHistograms(TString srcname="GlobalDigis.root",
   Canvas2->Divide(2,2);
   myCanvas = Canvas2; 
   myCanvas->cd(1);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hEScaln->Draw();
   myCanvas->cd(2);
   //gPad->SetLogy();
@@ -1011,13 +1011,13 @@ void MakeHistograms(TString srcname="GlobalDigis.root",
   myCanvas = Canvas3;
   for (Int_t i = 0; i < 4; ++i) {
     myCanvas->cd(1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hHcaln[i]->Draw();
     myCanvas->cd(2);
     //gPad->SetLogy();
     hHcalAEE[i]->Draw();
     myCanvas->cd(3);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hHcalSHE[i]->Draw();
     myCanvas->cd(4);
     //gPad->SetLogy();  
@@ -1034,7 +1034,7 @@ void MakeHistograms(TString srcname="GlobalDigis.root",
   myCanvas = Canvas4;
   for (Int_t i = 0; i < 19; ++i) {
     myCanvas->cd(1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hSiStripn[i]->Draw();
     myCanvas->cd(2);
     //gPad->SetLogy();
@@ -1051,10 +1051,10 @@ void MakeHistograms(TString srcname="GlobalDigis.root",
   myCanvas = Canvas5;
   for (Int_t i = 0; i < 7; ++i) {
     myCanvas->cd(1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hSiPixeln[i]->Draw();
     myCanvas->cd(2);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hSiPixelADC[i]->Draw();
     myCanvas->cd(3);
     //gPad->SetLogy();
@@ -1071,7 +1071,7 @@ void MakeHistograms(TString srcname="GlobalDigis.root",
   myCanvas = Canvas6;
   for (Int_t i = 0; i < 4; ++i) {
     myCanvas->cd(1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hDtMuonn[i]->Draw();
     myCanvas->cd(2);
     //gPad->SetLogy();
@@ -1091,7 +1091,7 @@ void MakeHistograms(TString srcname="GlobalDigis.root",
   Canvas7->Divide(2,2);
   myCanvas = Canvas7;
   myCanvas->cd(1);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hCSCStripn->Draw();
   myCanvas->cd(2);
   //gPad->SetLogy();
@@ -1104,7 +1104,7 @@ void MakeHistograms(TString srcname="GlobalDigis.root",
   Canvas8->Divide(2,2);
   myCanvas = Canvas8;
   myCanvas->cd(1);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hCSCWiren->Draw();
   myCanvas->cd(2);
   //gPad->SetLogy();
