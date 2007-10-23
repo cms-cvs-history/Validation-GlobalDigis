@@ -1,0 +1,5 @@
+## needed backend
+service = DaqMonitorROOTBackEnd{ }
+
+## actual producer
+include "Validation/GlobalDigis/data/globaldigishistogrammer.cfi"

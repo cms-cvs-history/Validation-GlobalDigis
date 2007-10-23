@@ -16,7 +16,6 @@ service = MessageLogger
    { 
       "FwkJob",
       "GlobalDigisProducer_GlobalDigisProducer",
-      "GlobalDigisProducer_beginJob",
       "GlobalDigisProducer_endJob",
       "GlobalDigisProducer_produce",
       "GlobalDigisProducer_fillG4MC",
@@ -31,7 +30,14 @@ service = MessageLogger
       "GlobalDigisProducer_storeHCal",
       "GlobalDigisProducer_clear",
       "ScheduleExecutionFailure",
-      "EventSetupDependency" 
+      "EventSetupDependency" ,
+      "GlobalDigisAnalyzer_GlobalDigisAnalyzer",
+      "GlobalDigisAnalyzer_endJob",
+      "GlobalDigisAnalyzer_produce",
+      "GlobalDigisAnalyzer_fillTrk",
+      "GlobalDigisAnalyzer_fillMuon",
+      "GlobalDigisAnalyzer_fillECal",
+      "GlobalDigisAnalyzer_fillHCal"
    }
 
    untracked PSet MessageLogger =
@@ -40,8 +46,6 @@ service = MessageLogger
       untracked bool noLineBreaks = true
       untracked PSet default = { untracked int32 limit = 0  }
       untracked PSet GlobalDigisProducer_GlobalDigisProducer = 
-	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalDigisProducer_beginJob = 
 	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalDigisProducer_endJob = 
 	{ untracked int32 limit = 10000000 }
@@ -73,6 +77,26 @@ service = MessageLogger
 	{ untracked int32 limit = 10000000 }
       untracked PSet EventSetupDependency = 
 	{ untracked int32 limit = 10000000 }
+       untracked PSet GlobalDigisAnalyzer_GlobalDigisAnalyzer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisAnalyzer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisAnalyzer_analyze = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisAnalyzer_fillTrk = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisAnalyzer_fillMuon = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisAnalyzer_fillECal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisAnalyzer_fillHCal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisHistogrammer_GlobalDigisHistogrammer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisHistogrammer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisHistogrammer_analyze = 
+	{ untracked int32 limit = 10000000 }
    }
    untracked PSet cout =
    {
@@ -81,8 +105,6 @@ service = MessageLogger
       untracked string threshold = "INFO"
       untracked PSet default = { untracked int32 limit = 0  }
       untracked PSet GlobalDigisProducer_GlobalDigisProducer = 
-	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalDigisProducer_beginJob = 
 	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalDigisProducer_endJob = 
 	{ untracked int32 limit = 10000000 }
@@ -114,6 +136,27 @@ service = MessageLogger
       //	{ untracked int32 limit = 10000000 }
       //untracked PSet EventSetupDependency = 
       //	{ untracked int32 limit = 10000000 }  
+       untracked PSet GlobalDigisAnalyzer_GlobalDigisAnalyzer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisAnalyzer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisAnalyzer_analyze = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisAnalyzer_fillTrk = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisAnalyzer_fillMuon = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisAnalyzer_fillECal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisAnalyzer_fillHCal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisHistogrammer_GlobalDigisHistogrammer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisHistogrammer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisHistogrammer_analyze = 
+	{ untracked int32 limit = 10000000 }
+
    }
    untracked PSet cerr =
    {
@@ -122,8 +165,6 @@ service = MessageLogger
       untracked string threshold = "WARNING"
       untracked PSet default = { untracked int32 limit = 0  }
       untracked PSet GlobalDigisProducer_GlobalDigisProducer = 
-	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalDigisProducer_beginJob = 
 	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalDigisProducer_endJob = 
 	{ untracked int32 limit = 10000000 }
@@ -155,6 +196,28 @@ service = MessageLogger
 	{ untracked int32 limit = 10000000 }
       untracked PSet EventSetupDependency = 
 	{ untracked int32 limit = 10000000 } 
+       untracked PSet GlobalDigisAnalyzer_GlobalDigisAnalyzer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisAnalyzer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisAnalyzer_analyze = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisAnalyzer_fillTrk = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisAnalyzer_fillMuon = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisAnalyzer_fillECal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisAnalyzer_fillHCal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisHistogrammer_GlobalDigisHistogrammer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisHistogrammer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalDigisHistogrammer_analyze = 
+	{ untracked int32 limit = 10000000 }
+      
+
    }
 
    untracked PSet FrameworkJobReport = 
