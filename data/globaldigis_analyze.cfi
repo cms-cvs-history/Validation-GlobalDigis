@@ -23,9 +23,10 @@ module globaldigisanalyze = GlobalDigisAnalyzer
     InputTag ECalESSrc = ecalPreshowerDigis
     InputTag HCalSrc   = g4SimHits:HcalHits
     InputTag HCalDigi  = hcalUnsuppressedDigis
-    InputTag SiStripSrc = siStripDigis
+    InputTag SiStripSrc = siStripDigis:ZeroSuppressed
     InputTag SiPxlSrc = siPixelDigis
     InputTag MuDTSrc = muonDTDigis
     InputTag MuCSCStripSrc = muonCSCDigis:MuonCSCStripDigi
     InputTag MuCSCWireSrc = muonCSCDigis:MuonCSCWireDigi
+    InputTag MuRPCSrc = muonRPCDigis
 }
