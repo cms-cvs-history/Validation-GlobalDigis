@@ -18,14 +18,14 @@ module globaldigis = GlobalDigisProducer
 	untracked bool PrintProvenanceInfo = false
     }
     
-    InputTag ECalEBSrc = ecalDigis:ebDigis
-    InputTag ECalEESrc = ecalDigis:eeDigis
-    InputTag ECalESSrc = ecalPreshowerDigis
+    InputTag ECalEBSrc = simEcalDigis:ebDigis
+    InputTag ECalEESrc = simEcalDigis:eeDigis
+    InputTag ECalESSrc = simEcalPreshowerDigis
     InputTag HCalSrc   = g4SimHits:HcalHits
-    InputTag HCalDigi  = hcalUnsuppressedDigis
-    InputTag SiStripSrc = siStripDigis
-    InputTag SiPxlSrc = siPixelDigis
-    InputTag MuDTSrc = muonDTDigis
-    InputTag MuCSCStripSrc = muonCSCDigis:MuonCSCStripDigi
-    InputTag MuCSCWireSrc = muonCSCDigis:MuonCSCWireDigi
+    InputTag HCalDigi  = simHcalUnsuppressedDigis
+    InputTag SiStripSrc = simSiStripDigis:ZeroSuppressed
+    InputTag SiPxlSrc = simSiPixelDigis
+    InputTag MuDTSrc = simMuonDTDigis
+    InputTag MuCSCStripSrc = simMuonCSCDigis:MuonCSCStripDigi
+    InputTag MuCSCWireSrc = simMuonCSCDigis:MuonCSCWireDigi
 }
