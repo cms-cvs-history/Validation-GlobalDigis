@@ -16,6 +16,8 @@ module globaldigisanalyze = GlobalDigisAnalyzer
 	untracked bool GetAllProvenances = false
 	untracked bool PrintProvenanceInfo = false
     }
+
+    string hitsProducer = "g4SimHits"
     
     InputTag ECalEBSrc = simEcalDigis:ebDigis
     InputTag ECalEESrc = simEcalDigis:eeDigis
