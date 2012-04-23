@@ -5,12 +5,12 @@ globaldigisanalyze = cms.EDAnalyzer("GlobalDigisAnalyzer",
     MuCSCStripSrc = cms.InputTag("simMuonCSCDigis","MuonCSCStripDigi"),
     MuDTSrc = cms.InputTag("simMuonDTDigis"),
     Name = cms.untracked.string('GlobalDigisAnalyzer'),
-    SiPxlSrc = cms.InputTag("simSiPixelDigis"),
+    SiPxlSrc = cms.InputTag("mix", "simSiPixelDigis"),
     Verbosity = cms.untracked.int32(0), ## 0 provides no output
 
     MuCSCWireSrc = cms.InputTag("simMuonCSCDigis","MuonCSCWireDigi"),
     ECalEESrc = cms.InputTag("simEcalDigis","eeDigis"),
-    SiStripSrc = cms.InputTag("simSiStripDigis","ZeroSuppressed"),
+    SiStripSrc = cms.InputTag("mix", "simSiStripDigisZeroSuppressed"),
     # 1 assumes cm in SimVertex
     ProvenanceLookup = cms.PSet(
         PrintProvenanceInfo = cms.untracked.bool(False),
