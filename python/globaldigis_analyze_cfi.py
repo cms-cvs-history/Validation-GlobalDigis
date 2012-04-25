@@ -26,7 +26,6 @@ globaldigisanalyze = cms.EDAnalyzer("GlobalDigisAnalyzer",
     ECalESSrc = cms.InputTag("simEcalPreshowerDigis"),
     # as of 110p2, needs to be 1. Anything ealier should be 0.
     VtxUnit = cms.untracked.int32(1),
-    #InputTag HCalDigi  = simHcalUnsuppressedDigis
     HCalDigi = cms.InputTag("simHcalDigis")
 )
 
